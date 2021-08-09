@@ -74,3 +74,40 @@ Starter Code for Lab03
    #I wanted to draw a diagonal line so the angle would have to be greater than 90 degrees
   #my_turtle.forward(70)
 #draw_picture(my_turtle)
+
+#Step 2.0
+#1. The anonymous turtle is when there is only one turtle. So you don't need to specify if it's turtle_1, turtle_2, or turtle_3, you know it's THE turtle.
+#2. Turtle with capitalized T means that it's an object, and in this case a function. Lower case turtle is a variable.
+#3. my_turtle.left(90)
+   #my_turtle.forward(100)
+   #or do
+   #my_turtle.setpos(0, 100)
+
+#Step 2.1
+import turtle
+def draw_z(the_turtle, size):
+  #I want to make the turtle to make 1/2 the diagnol of my Z then the top horizontal line
+  the_turtle.left(45)
+  the_turtle.forward(100 * size)
+  the_turtle.left(135)
+  the_turtle.forward(100 * size)
+  #I want the turtle to go back to the middle, without drawing to then draw the middle line of the Z
+  the_turtle.penup()
+  the_turtle.goto(0,0)
+  the_turtle.pendown()
+  the_turtle.forward(45 * size)
+  the_turtle.backward(90 * size)
+  #Going back to the middle one last time I want the turtle to finish the seconed half of the Z diagnol and horizontal line
+  the_turtle.penup()
+  the_turtle.goto(0,0)
+  the_turtle.pendown()
+  the_turtle.left(45)
+  the_turtle.forward(100 * size)
+  the_turtle.left(135)
+  the_turtle.forward(100 * size)
+my_turtle = turtle.Turtle() 
+#draw_z(my_turtle, 10)
+#By multiplying it by size when moving forward and backwards we were able to adjust the size of the letter Z!
+draw_z(my_turtle, 0.3)
+
+#Rena is awesome and big brain
