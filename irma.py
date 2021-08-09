@@ -54,6 +54,7 @@ def irma():
         # You'll need to add some code here, before the loop
         # One thing you'll need to figure out how to do is to
         # skip the first line of the file (which is the header).
+        next(pointreader)
         # You might use a boolean variable, or you can
         # look into Python's built-in next function
         #(https://docs.python.org/3/library/functions.html#next)
@@ -67,6 +68,7 @@ def irma():
             # Make sure you understand what is happening here.
             # Then, you'll need to change this code
             print("Date:", row[0], "Time:", row[1])
+            #We know latitude is row 2 longtitude is row 3, wind is row 4
 
 
 
@@ -80,3 +82,7 @@ def irma():
 
 if __name__ == "__main__":
     bg=irma()
+    
+turtle.exitonclick()
+
+#Everytime we wanna run our code we go to shell and type "python irma.py"
