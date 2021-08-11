@@ -64,6 +64,7 @@ def irma():
         #t.setpos(-17.66,0)
         #t.setpos(-90, 45)
        #t.setpos(-53.83, 22.5)
+       #We wanted to have it start somewhere, but this isn't necessary
 
         for row in pointreader:
             # row is a list representing each line in the csv file
@@ -101,7 +102,7 @@ def irma():
             t.pendown()
 
             #t.write("3", font=("Arial", 10, "normal"))
-
+              #Hannah gave us this to tell us how to make the turtle write the number for us
             #We want to make a loop so that it will continue to draw out row 2 and row 3, creating a line
             
 
